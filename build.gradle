@@ -9,18 +9,42 @@ buildscript {
 }
 
 apply plugin: 'android'
+apply plugin: 'maven'
+
+repositories {
+//    mavenCentral()
+     maven {
+        url "http://localhost:9080/nexus-2.11.1-01/content/groups/public"
+     }
+}
 
 android {
     buildToolsVersion "19.0.3"
     compileSdkVersion 19
 }
 
-repositories {
-    mavenCentral()
-}
-
 dependencies {
     compile("joda-time:joda-time:2.3")
+}
+
+uploadArchives {
+    repositories {
+	mavenDeployer {
+	   repository(url: "http://localhost:9080/nexus-2.11.1-01/content/repositories/elm-repository") {
+               authentication(userName: "admin", password: "admin123")
+           }
+           pom.groupId = "com.elmejor"
+           pom.version = "1.0-SNAPSHOT"
+        }
+    }
+}
+
+configurations {
+  resultArchives
+}
+
+artifacts{
+  resultArchives file: file('build/apk/continuousdeliverymobile-release-unsigned.apk')
 }
 
 task wrapper(type: Wrapper) {
