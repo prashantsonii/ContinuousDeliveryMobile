@@ -56,3 +56,7 @@ configurations {
 artifacts{
   resultArchives file: file('build/outputs/apk/contdeliverymobile.apk')
 }
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '1.11'
+}
