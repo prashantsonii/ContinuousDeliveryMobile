@@ -17,7 +17,7 @@ repositories {
      }
 }
 
-def appName = 'contdeliverymobile'
+def appName = 'continuousdeliverymobile'
 
 android {
     buildToolsVersion "19.1.0"
@@ -50,11 +50,11 @@ uploadArchives {
 }
 
 configurations {
-  resultArchives
+   resultArchives   
 }
 
 artifacts{
-  resultArchives file: file('build/outputs/apk/contdeliverymobile.apk')
+  resultArchives file: file('build/outputs/apk/continuousdeliverymobile.apk')
 }
 
 task wrapper(type: Wrapper) {
