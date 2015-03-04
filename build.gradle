@@ -40,6 +40,9 @@ uploadArchives {
 	   repository(url: "http://localhost:9080/nexus-2.11.1-01/content/repositories/elm-repository") {
                authentication(userName: "admin", password: "admin123")
            }
+           snapshotRepository(url: "http://localhost:9080/nexus-2.11.1-01/content/repositories/elm-repository") {
+               authentication(userName: "admin", password: "admin123")
+           }
            pom.groupId = "com.elmejor"
            pom.version = "1.0-SNAPSHOT"
         }
