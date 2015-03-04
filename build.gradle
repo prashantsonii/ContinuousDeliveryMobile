@@ -51,7 +51,7 @@ configurations {
 }
 
 artifacts{
-  resultArchives file: file('build/apk/continuousdeliverymobile.apk')
+  resultArchives file: file('build/outputs/apk/continuousdeliverymobile.apk')
 }
 
 task wrapper(type: Wrapper) {
