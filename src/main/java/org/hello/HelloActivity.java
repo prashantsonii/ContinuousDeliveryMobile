@@ -21,5 +21,4 @@ public class HelloActivity extends Activity {
         TextView textView = (TextView) findViewById(R.id.text_view);
         textView.setText("The current local time is: " + currentTime);
     }
-
 }
