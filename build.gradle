@@ -37,10 +37,10 @@ dependencies {
 uploadArchives {
     repositories {
 	mavenDeployer {
-	   repository(url: "http://localhost:9080/nexus-2.11.1-01/content/repositories/elm-repository") {
+	   repository(url: "http://localhost:8080/nexus-2.11.2-03/content/repositories/elm-repository") {
                authentication(userName: "admin", password: "admin123")
            }
-           snapshotRepository(url: "http://localhost:9080/nexus-2.11.1-01/content/repositories/elm-repository") {
+           snapshotRepository(url: "http://localhost:8080/nexus-2.11.2-03/content/repositories/elm-repository") {
                authentication(userName: "admin", password: "admin123")
            }
            pom.groupId = "com.elmejor"
